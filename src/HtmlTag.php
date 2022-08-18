@@ -35,15 +35,15 @@ class HtmlTag
             $propsString .= $propName . '="' . $value . '" ';
         }
 		
-		$main = $this->tagName;
-		
-		if ($propsString !== '') {
-			$main .= ' ' . trim($propsString);
-		}
-		
-		if ($this->style !== '') {
-			$main .= ' style="' . $this->style . '"';  
-		}
+	$main = $this->tagName;
+
+	if ($propsString !== '') {
+	    $main .= ' ' . trim($propsString);
+	}
+
+	if ($this->style !== '') {
+	    $main .= ' style="' . $this->style . '"';  
+	}
 		
 
         return '<' . $main . '>' . $this->content . '</' . $this->tagName . '>';
