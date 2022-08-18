@@ -34,8 +34,19 @@ class HtmlTag
         foreach($this->props as $propName => $value) {
             $propsString .= $propName . '="' . $value . '" ';
         }
+		
+		$main = $this->tagName;
+		
+		if ($propsString !== '') {
+			$main .= ' ' . trim($propsString);
+		}
+		
+		if ($this->style !== '') {
+			$main .= ' style="' . $this->style . '"';  
+		}
+		
 
-        return '<' . $this->tagName . ' ' . trim($propsString) . ' style="' . $this->style . '">' . $this->content . '</' . $this->tagName . '>';
+        return '<' . $main . '>' . $this->content . '</' . $this->tagName . '>';
     }
 
     public function __toString(): string
