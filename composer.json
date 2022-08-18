@@ -1,0 +1,15 @@
+{
+    "name": "mtlukaszczyk/htmlables",
+    "description": "Simple library for creating html content",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Lukaszczyk\\Htmlables\\": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "php": "^8.0"
+    }
+}
